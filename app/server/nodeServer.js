@@ -1,20 +1,9 @@
-var http = require('http');
-var fs = require('fs');
-var PORT=8080;
+//serves everything in /app/* as localhost:8080/*
+var express = require('express');
+var app = express();
 
-function serveContent(){
+app.use(express.static(__dirname + '/../'));
 
-}
-
-function handleRequest(request, response){
-  fs.readFile('index.html', 'utf8', function(err, readBytes) {
-    response.end(readBytes);
-  });
-}
-
-
-var server = http.createServer(handleRequest);
-
-server.listen(PORT, function(){
-    console.log("Server listening on: http://localhost:%s", PORT);
+app.listen(8080, function () {
+  console.log('Example app listening on port 8080!');
 });

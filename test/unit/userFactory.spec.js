@@ -12,7 +12,7 @@ describe('userFactory', function(){
   }));
 
   it('is expected to have a username', function(){
-      expect(user.username).toEqual(username);
+      expect(user.login).toEqual(username);
   });
 
   it('is expected to have an avatar', function(){

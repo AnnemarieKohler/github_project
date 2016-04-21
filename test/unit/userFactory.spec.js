@@ -5,7 +5,7 @@ describe('userFactory', function(){
 
   beforeEach(inject(function(UserFactory){
     username = 'Bob';
-    avatar = 'https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png';
+    avatar = 'awesome pic';
     followers = 10;
     repos = 15;
     user = new UserFactory(username, avatar, followers, repos);

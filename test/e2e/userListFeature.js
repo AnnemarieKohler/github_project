@@ -8,11 +8,6 @@ describe("User list", function() {
     expect(guy).toMatch("Guy1")
   })
 
-  // it("displays a user", function() {
-  //   browser.get('/');
-  //   var guy = $$('#user-list img').first();
-  //   expect(guy).toMatch(testurl)
-  // })
 
 });
 

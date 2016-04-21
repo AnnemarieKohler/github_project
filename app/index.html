@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="gitHubUserList">
   <head>
     <meta charset="utf-8">
     <title>Hello World</title>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/userListController.js"></script>
+    <script type="text/javascript" src="js/factories/UserFactory.js"></script>
+
   </head>
   <body>
-    <ul id="user-list">
-      <li>
-        Guy1
-      </li>
-    </ul>
+    <div id="github-search" ng-controller="gitHubUserController as controller">
 
+      <input type="text" name="name-search" value="" ng-model="searchTerm">
+      <button ng-click="controller.searchUsers(searchTerm)">Search users</button>
+      <ul id="user-list">
+        <li ng-repeat="users in controller.users">
+          Guy1 is a cool guy
+          <strong>Username:</strong> {{users.username}}
+          <strong>Avatar:</strong> {{users.avatar}}
+          <strong>Followers:</strong> {{users.followers}}
+          <strong>Repos:</strong> {{users.repos}}
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

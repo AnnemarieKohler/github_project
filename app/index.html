@@ -15,8 +15,10 @@
       <input type="text" name="name-search" value="" ng-model="searchTerm">
       <button ng-click="controller.searchUsers(searchTerm)">Search users</button>
       <ul id="user-list">
-        <li ng-repeat="users in controller.users">
-          Guy1 is a cool guy
+        <li ng-repeat="users in controller.users | filter:searchTerm">
+        <!-- <li ng-repeat="users in controller.users"> -->
+
+          <!-- Guy1 is a cool guy -->
           <strong>Username:</strong> {{users.username}}
           <strong>Avatar:</strong> {{users.avatar}}
           <strong>Followers:</strong> {{users.followers}}

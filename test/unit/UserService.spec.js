@@ -15,13 +15,18 @@ describe('UserService', function(){
   it('fetches API data and builds user data', function(){
     httpBackend.expectGET('http://api.github.com/users').respond(userData);
     var username = userData[0].login;
-    // console.log(username);
-    httpBackend.expectGET('http://api.github.com/users/' + username);
-    var user1 = new UserFactory('bob123', 'awesomer pic', 10, 15);
-    // var user2 = new UserFactory('bobilicious', 'awesomer pic', 10, 15);
-    UserService.getAll().then(function(userData){
-      expect(userData).toEqual([user1]);
-    });
+
+    console.log(username);
+
+    httpBackend.expectGET('http://api.github.com/users/' + username).respond(userData);
+    var user1 = new UserFactory(userData.login, userData.avatar, userData.followers, userData.repos);
+    // UserService.getAll()(function(userData){
+    console.log('blaaaa');
+    console.log(new UserFactory(userData.login, userData.avatar, userData.followers, userData.repos));
+    console.log(user1.login);
+      expect(userData[0].data).toBe(user1);
+    // });
     httpBackend.flush();
+
   });
 });

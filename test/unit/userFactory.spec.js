@@ -1,13 +1,14 @@
 describe('userFactory', function(){
   beforeEach(module('gitHubUserList'));
 
-  var user, username, avatar, followers;
+  var user, username, avatar, followers, repos;
 
   beforeEach(inject(function(UserFactory){
     username = 'Bob';
     avatar = 'https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png';
     followers = 10;
-    user = new UserFactory(username, avatar, followers);
+    repos = 15;
+    user = new UserFactory(username, avatar, followers, repos);
   }));
 
   it('is expected to have a username', function(){
@@ -20,6 +21,10 @@ describe('userFactory', function(){
 
   it('is expected to have followers', function(){
     expect(user.followers).toEqual(followers);
+  });
+
+  it('is expected to have repos', function(){
+    expect(user.repos).toEqual(repos);
   });
 
 });

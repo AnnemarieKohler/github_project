@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/AnnemarieKohler/github_project#readme",
   "devDependencies": {
-    "bower": "^1.7.9"
+    "bower": "^1.7.9",
+    "jasmine-spec-reporter": "^2.4.0",
+    "protractor": "^3.2.2"
   }
 }

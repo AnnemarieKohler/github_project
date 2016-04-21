@@ -1,17 +1,17 @@
 describe("User list", function() {
 
-
-
-  it("displays a user", function() {
+  it("displays users", function() {
     browser.get('/');
-    var guy = $$('#user-list li').first().getText();
-    expect(guy).toMatch("Guy1")
-  })
+    var guys = $$('#user-list li');
+    expect(guys.count()).toBe(4);
+  });
 
+  it("filter users by the text entered", function() {
+    browser.get('/');
+    var searchBox = $('#name-search');
+    searchBox.sendKeys('lorenzo');
+    var guys = $$('#user-list li');
+    expect(guys.count()).toBe(1);
+  });
 
 });
-
-
-
-write the test
-write the logic in the controller

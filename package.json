@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm install",
     "start": "bower install && node app/nodeServer.js"
   },
   "repository": {
@@ -17,7 +18,6 @@
   },
   "homepage": "https://github.com/AnnemarieKohler/github_project#readme",
   "devDependencies": {
-    "bower": "^1.7.9",
     "jasmine-spec-reporter": "^2.4.0",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
@@ -25,6 +25,7 @@
     "protractor": "^3.2.2"
   },
   "dependencies": {
+    "bower": "^1.7.9",
     "express": "^4.13.4"
   }
 }

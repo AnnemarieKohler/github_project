@@ -1,4 +1,4 @@
-gitHubUserList.service('UserListService', ['$http', 'UserFactory', function($http, UserFactory){
+gitHubUserList.service('UserListService', ['$http', function($http){
 
   this.getAll = function(){
 

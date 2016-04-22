@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app/server/nodeServer.js"
+    "start": "bower install && node app/nodeServer.js"
   },
   "repository": {
     "type": "git",

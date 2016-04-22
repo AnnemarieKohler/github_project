@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npm install",
+    "start": "bower install && node app/nodeServer.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "protractor": "^3.2.2"
   },
   "dependencies": {
-    "bower": "^1.7.9"
+    "bower": "^1.7.9",
+    "express": "^4.13.4"
   }
 }

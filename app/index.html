@@ -25,19 +25,19 @@
       </div>
       <div class="users">
         <ul id="user-list">
-          <div class="user-box" ng-repeat="users in controller.users | filter:searchTerm">
+          <li class="user-box" ng-repeat="users in controller.users | filter:searchTerm">
             <div class="user-box-avatar">
               <strong>Avatar:</strong> {{users.avatar}}
               <div class="user-img-example">test</div>
             </div>
             <div class="user-box-other">
-              <strong>Username:</strong> {{users.username}}
+              <strong>Username:</strong> {{users}}
               <strong>Followers:</strong> {{users.followers}}
               <strong>Repos:</strong> {{users.repos}}
             </div>
             <div class="user-box-right">
             </div>
-          </div>
+          </li>
         </ul>
       </div>
     </div>

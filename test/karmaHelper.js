@@ -1,3 +1,9 @@
+var helperLogger = function(dump) {
+  console.log("------------START OF DATADUMP:------------");
+  console.log(dump);
+  console.log("-------------END OF DATADUMP:-------------");
+};
+
 var SAMPLEUSER =
 {
 "login": "mojombo",

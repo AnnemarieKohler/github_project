@@ -12,9 +12,8 @@ describe('UserListService', function(){
   it('logger', function() {
     httpBackend.whenGET('http://api.github.com/search/users').respond(SAMPLESEARCH);
     UserListService.getUserListByName('lorenzo')
-      .then(function(dump) {
-        console.log("hello");
-        console.log(dump);
+      .then(function(blob) {
+        helperLogger(blob);
       });
     httpBackend.flush();
   });

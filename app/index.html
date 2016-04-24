@@ -22,10 +22,11 @@
       <div id="search-box">
         <label id="search-text">GitHub User Search: </label>
         <input id="name-search" type="text" value="" ng-model="searchTerm">
+        <button ng-click="controller.updateUserList(searchTerm)">Filter!</button>
       </div>
       <div class="users">
         <ul id="user-list">
-          <li class="user-box" ng-repeat="user in controller.users | filter:searchTerm">
+          <li class="user-box" ng-repeat="user in controller.users">
             <div class="user-box-avatar">
               <img class="user-img-example" src="{{user.avatar}}">
             </div>

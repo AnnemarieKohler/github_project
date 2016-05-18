@@ -8,5 +8,5 @@ exports.config = {
    },
  jasmineNodeOpts: {
    print: function() {}
- } 
-}
+ }
+};

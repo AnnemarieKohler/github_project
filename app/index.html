@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="gitHubUserList">
   <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
-    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
-  </head>
-  <body>
 
+    <title>Github User Search</title>
+
+    <!--- Scripts -->
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/userListController.js"></script>
+    <script type="text/javascript" src="js/services/UserListFactory.js"></script>
+    <script type="text/javascript" src="js/services/userListService.js"></script>
+
+    <!-- Stylesheets & Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheet/main.css">
+  </head>
+
+  <body>
+    <div id="github-search" ng-controller="gitHubUserController as controller">
+      <div id="search-box">
+        <label id="search-text">GitHub User Search: </label>
+        <input id="name-search" type="text" value="" ng-model="searchTerm">
+      </div>
+      <div class="users">
+        <ul id="user-list">
+          <li class="user-box" ng-repeat="user in controller.users | filter:searchTerm">
+            <div class="user-box-avatar">
+              <img class="user-img-example" src="{{user.avatar}}">
+            </div>
+            <div class="user-box-other">
+              <strong>Username:</strong> {{user.login}}
+            </div>
+            <div class="user-box-right">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

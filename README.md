@@ -1,11 +1,19 @@
-To run the project
+# GitHub Project
+
+
+Idea: Finding GitHub users and displaying the user, their picture, number of followers and repos.
+
+## Technologies
+* HTML/CSS
+* JavaScript
+* Angular
+* Testing: Karma (unit tests), Protractor(end-to-end tests)
+
+
+### To run the project
 * clone this repo
-* run the following commands:
+* run `npm install` and `bower install`
 
-```
-npm install
-
-bower install```
 
 ### For the feature test run:
 ```

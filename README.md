@@ -13,6 +13,7 @@ Idea: Finding GitHub users and displaying the user, their picture, number of fol
 ### To run the project
 * clone this repo
 * run `npm install` and `bower install`
+* run `npm start` and go to `http://localhost:8080`
 
 
 ### For the feature test run:
